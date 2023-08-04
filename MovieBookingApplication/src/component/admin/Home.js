@@ -15,7 +15,7 @@ function Home(){
 
     const fetchMovies = async() => {
         try{
-            const response = await axios.get('http://localhost:8085/api/v1.0/moviebooking/all', {
+            const response = await axios.get('http://34.16.113.110:8085/api/v1.0/moviebooking/all', {
                 validateStatus: function (status) {
                     return status >= 200 && status < 303; // default
                   },
@@ -37,7 +37,7 @@ function Home(){
             alert("Ticket Status already updated")
         }else{
         if(noOfTicketsAvailable.toString() === '0'){
-            axios.put(`http://localhost:8085/api/v1.0/moviebooking/${movieName}/update`,{},{
+            axios.put(`http://34.16.113.110:8085/api/v1.0/moviebooking/${movieName}/update`,{},{
                 headers:{
                     'Content-Type': 'application/json',
                     Authorization:`Bearer ${localStorage.getItem('accessToken')}`
@@ -61,7 +61,7 @@ function Home(){
 
     const deleteMovie = (movieName) => {
         
-        axios.delete(`http://localhost:8085/api/v1.0/moviebooking/${movieName}/delete`,{
+        axios.delete(`http://34.16.113.110:8085/api/v1.0/moviebooking/${movieName}/delete`,{
             headers:{
                 'Content-Type': 'application/json',
                 Authorization:`Bearer ${localStorage.getItem('accessToken')}`

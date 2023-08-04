@@ -41,7 +41,7 @@ function BookingPage(){
             if(bookedSeats.includes(seatNumbers)){
                 alert("seat already booked")
             }else{
-            axios.post(`http://localhost:8085/api/v1.0/moviebooking/${movieName}/add`,{
+            axios.post(`http://34.16.113.110:8085/api/v1.0/moviebooking/${movieName}/add`,{
             loginId:localStorage.getItem('loginId'),
             movieName:movieName,
             theatreName:theatreName,
@@ -73,7 +73,7 @@ function BookingPage(){
 
     const fetchBookedTickets = async() => {
         try{
-            const response = await axios.get(`http://localhost:8085/api/v1.0/moviebooking/getallbookedtickets/${movieName}`,{
+            const response = await axios.get(`http://34.16.113.110:8085/api/v1.0/moviebooking/getallbookedtickets/${movieName}`,{
                         headers:{
                             'Content-Type': 'application/json',
                             Authorization:`Bearer ${localStorage.getItem('accessToken')}`
