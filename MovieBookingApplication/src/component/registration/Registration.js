@@ -63,7 +63,7 @@ function Registration() {
         }
         else{
             try{
-                await axios.post("http://34.16.113.110:8085/api/v1.0/moviebooking/register", {
+                await axios.post("http://localhost:8085/api/v1.0/moviebooking/register", {
                     loginId: formData.loginId,
                     firstName: formData.firstName,
                     lastName: formData.lastName,
