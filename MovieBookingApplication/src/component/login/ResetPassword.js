@@ -18,7 +18,7 @@ function ResetPassword(){
 
     const fetchUser = async() => {
         try{
-            const response = await axios.get('http://localhost:8085/api/v1.0/moviebooking/users');
+            const response = await axios.get('https://localhost:8085/api/v1.0/moviebooking/users');
             const data = response.data;
             const user = data.flatMap((users) => users.loginId);
             setUser(user.toString())
@@ -45,7 +45,7 @@ function ResetPassword(){
         if(user.includes(loginId)){
             if(password === confirmPassword){
                 try{
-                    const response = axios.put(`http://localhost:8085/api/v1.0/moviebooking/${loginId}/forgot`, {
+                    const response = axios.put(`https://localhost:8085/api/v1.0/moviebooking/${loginId}/forgot`, {
                        loginId:loginId,
                        password:password
                    },{
