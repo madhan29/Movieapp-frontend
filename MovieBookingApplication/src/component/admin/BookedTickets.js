@@ -10,7 +10,7 @@ function BookedTickets(){
 
     const fetchAllTickets = async() => {
         try{
-            const response = await axios.get(`http://35.224.90.56:8085/api/v1.0/moviebooking/getallbookedtickets/${movieName}`,{
+            const response = await axios.get(`https://moviebooking-y6k3w4hbra-uc.a.run.app/api/v1.0/moviebooking/getallbookedtickets/${movieName}`,{
                         headers:{
                             'Content-Type': 'application/json',
                             Authorization:`Bearer ${localStorage.getItem('accessToken')}`

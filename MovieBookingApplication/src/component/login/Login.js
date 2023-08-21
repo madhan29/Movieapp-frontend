@@ -15,7 +15,7 @@ function Login() {
     async function login(event) {
         event.preventDefault();
         try {
-          await axios.post('http://35.224.90.56:8085/api/v1.0/moviebooking/login', {
+          await axios.post('https://moviebooking-y6k3w4hbra-uc.a.run.app/api/v1.0/moviebooking/login', {
            
             loginId: loginId,
             password: password,
@@ -57,7 +57,7 @@ const forgotPasswordPage = async(event) => {
         alert("Please Enter Your LoginID to change Password")
     }else{
         try{
-            const response = await axios.get('http://35.224.90.56:8085/api/v1.0/moviebooking/users');
+            const response = await axios.get('https://moviebooking-y6k3w4hbra-uc.a.run.app/api/v1.0/moviebooking/users');
             const data = response.data;
             const user = data.flatMap((users) => users.loginId);
             setUser(user.toString())

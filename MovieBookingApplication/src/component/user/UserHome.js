@@ -17,7 +17,7 @@ function UserHome(){
 
     const fetchMovies = async() => {
         try{
-            const response = await axios.get('http://35.224.90.56:8085/api/v1.0/moviebooking/all', {
+            const response = await axios.get('https://moviebooking-y6k3w4hbra-uc.a.run.app/api/v1.0/moviebooking/all', {
                 validateStatus: function (status) {
                     return status >= 200 && status < 303;
                   },
